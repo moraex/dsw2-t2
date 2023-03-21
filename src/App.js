@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
+import {useQuery} from 'react-query';
+import { fetchCats } from './utils/fetcher';
+import CatItem from './components/ListItem';
 import './App.css';
 import logo from './assets/images/ufscat_logo.png';
 import banner from './assets/images/banner.png';
 
 const App = () => {
-  //aqui vai o codigo responsavel pela utilização da API
+  // aqui vai o codigo responsavel pela utilização da API
+  const {data, error, isLoading} = useQuery('cats',fetchCats);
   
   return (
     <body>
@@ -53,7 +57,11 @@ const App = () => {
       </section>
 
       <main>
-        
+        <section className="cat-cards">
+          {isLoading ? "Aguarde, os felinos estão chegando..." : data.map((cat, index) => 
+            cat['reference_image_id'] !== undefined && <CatItem cat={cat}/>
+          )}
+        </section>
       </main>
     </body>
   );
