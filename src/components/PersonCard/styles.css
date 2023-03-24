@@ -1,0 +1,29 @@
+.person-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background-color: var(--secundary-color);
+  padding: 16px;
+}
+
+.person-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+
+}
+
+.person-picture {
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  border-radius: 100vw;
+  overflow: hidden;
+}
+
+.person-picture > img {
+  width: 100%;
+  aspect-ratio: 1;
+}

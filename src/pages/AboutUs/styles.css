@@ -1,0 +1,15 @@
+section, main {
+  padding: 24px;
+}
+
+section,main {
+  margin: 8px 8px;
+}
+
+.section-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}

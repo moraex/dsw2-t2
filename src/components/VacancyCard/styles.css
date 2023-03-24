@@ -1,0 +1,33 @@
+.vacancy-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  background-color: var(--secondary-background-color);
+  padding: 16px;
+
+}
+
+.vacancy-name {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.vacancy-icon {
+  width: 24px;
+  height: 24px;
+
+}
+
+.vacancy-description {
+  margin-bottom: auto;
+
+}
+
+.vacancy-period {
+  margin-top: 8px;
+  font-style: italic;
+}
