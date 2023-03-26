@@ -1,8 +1,8 @@
+import React from 'react';
 import banner from '../../assets/images/banner.png';
 import CatItem from '../../components/ListItem';
 import { useQuery } from 'react-query';
 import { fetchCats } from '../../utils/fetcher';
-import Header from '../../components/Header';
 
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
       <main>
         <section className="cat-cards">
           {isLoading ? "Aguarde, os felinos estão chegando..." : data.map((cat) =>
-            cat['reference_image_id'] !== undefined && <CatItem cat={cat} key={cat.id}/>
+            cat['reference_image_id'] !== undefined && <CatItem cat={cat} key={cat.id} />
           )}
         </section>
       </main>

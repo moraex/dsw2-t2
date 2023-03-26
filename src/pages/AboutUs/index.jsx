@@ -1,3 +1,4 @@
+import React from 'react';
 import CardGrid from '../../components/CardGrid';
 import PersonCard from '../../components/PersonCard';
 import VacancyCard from '../../components/VacancyCard';
