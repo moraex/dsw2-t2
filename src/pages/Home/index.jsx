@@ -30,8 +30,8 @@ const Home = () => {
 
       <main>
         <section className="cat-cards">
-          {isLoading ? "Aguarde, os felinos estão chegando..." : data.map((cat) =>
-            cat['reference_image_id'] !== undefined && <CatItem cat={cat} key={cat.id} />
+          {isLoading ? "Aguarde, os felinos estão chegando..." : data.map((cat, index) =>
+            cat['reference_image_id'] !== undefined && <CatItem catObj={cat} key={cat.id} />
           )}
         </section>
       </main>

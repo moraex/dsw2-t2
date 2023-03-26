@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import loading from "../../assets/images/loading.gif";
 
-const CatItem = ({ cat }) => {
-  const { name, origin, temperament, reference_image_id } = cat;
+const catSex = ["Male","Female"]
+
+const CatItem = ({ catObj }) => {
+  const { name, origin, temperament, reference_image_id } = catObj;
   const [isLoading, setIsLoading] = useState(true);
   const [catImage, setCatImage] = useState({});
 
@@ -12,6 +14,9 @@ const CatItem = ({ cat }) => {
       .then((data) => {
         setCatImage(data);
         setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log("ERROR:::", error)
       });
   }
 
@@ -30,7 +35,7 @@ const CatItem = ({ cat }) => {
             {name} • {origin} • {temperament}
           </p>
           <div className="details">
-            <p className="text-md">Femea</p>
+            <p className="text-md">{catSex[Math.floor(Math.random() * catSex.length)]}</p>
             <p className="cat-card-action text-md">Adotar</p>
           </div>
         </div>
