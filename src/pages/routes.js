@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import AboutUs from "./AboutUs";
 import Home from "./Home";
+import Adote from "./Adote"
 
 const UnauthenticatedRoute = () => {
   return (
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
     },
     {
       path: '/about-us',
-      element: <AboutUs /> }
+      element: <AboutUs />
+    },
+    {
+      path: '/adote',
+      element: <Adote /> }
     ]
   },
 
